@@ -1,11 +1,16 @@
 <html>
 	<head>
-	  <title>Comprehensive Environment Pollution Index for Critically Polluted Industrial Area/Clusters</title>
+	  <title>Map Visualisation - Critically Polluted Industrial Area/Clusters based on CEPI Index.</title>
 	  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 	  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	   <script src="leaflet.ajax.min.js"></script>
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 	  <style>
 
 	  	
@@ -18,12 +23,94 @@ html, body, #map {
     height: 100%;
     width:100%;
 }
+
+.modal {
+}
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:inherit;
+    /* To center horizontally */
+    margin: 0 auto;
+    font-size: 18px;
+}
+.modal-dialog{
+  width :75%;
+}
+.launch{
+  position:absolute;
+  margin: :10px 10px;
+  padding: 10px;
+  z-index: 1000000;
+  bottom: 30px;
+
+
+}
+.btn-container{
+  padding: 20px 20px 20px;
+  margin: 20px;
+}
 	  </style>	
 	
 	</head>
 	<body>
-	
-	<div id="map" ></div>
+	  <!-- Button trigger modal -->
+
+
+	<div id="map" > <div class="btn-container"><button class="btn btn-primary btn-lg launch" data-toggle="modal" data-target="#myModal">Click here to Understand Map</button></div>
+</div>
+
+<!-- Button trigger modal -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                    </button>
+                     <h4 class="modal-title" id="myModalLabel"><strong>Map Visualisation </strong>- <b>Critically Polluted Industrial Area/Clusters based on CEPI Index.</b></h4>
+
+                </div>
+                                <div class="modal-body">What is the map trying to represent?<br>
+
+                  => This is a map showing clusters of Critically Polluted Industrial Clusters/Areas in India.<br><br>
+
+                  What does the blue markers <img src="marker.png"> represent? <br>
+
+                  => The blue markers represent the Industrial Clusters/Area.<br><br>
+
+                  Additional Information<br>
+                  => Each Industrial Cluster has a <a href="https://www.google.co.in/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=what+is+comprehensive+environmental+pollution+index" target="_blank"> CEPI</a> index value comprising of 3 dimensions.The index captures the dimensions of environment including Air, Water and Land.<br><br>
+                  What is CEPI Index ?<br>
+                  => Comprehensive Environmental Pollution Index (CEPI) comprises of the scores of the critically polluted industrial clusters/areas. The index captures the various dimensions of environment including air, water and land.<br><br>
+
+                  How can I view the CEPI index Scores?<br>
+                  => You can click on the markers (<img src="marker.png">) to get additional Information about the CEPI Index Scores.
+<br><br>
+                  What is the Data Source? <br>
+                  => The CEPI index data was grabbed from <a href="https://data.gov.in/" target="_blank">www.datagov.in </a> and the latitude/longitude information was taken from Google MAPs Geocoding API. 
+                   </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
   <script>
 	  	var map = L.map('map').setView([20.593684, 78.962880], 5);
@@ -73,3 +160,30 @@ html, body, #map {
 	  </script>
 	</body>
 </html>
+
+
+
+
+
+
+
+<div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+
+                    </button>
+                     <h4 class="modal-title" id="myModalLabel"><strong>Map Visualisation </strong>- <b>Critically Polluted Industrial Area/Clusters.</b></h4>
+
+                </div>
+                <div class="modal-body">What is the map trying to represent?<br>
+
+                  => This is a map showing clusters of Critically Polluted Industrial Clusters/Areas in India.<br>
+
+                  What does the blue markers <img src="marker.png"> represent? <br>
+
+                  => The blue markers represent the Industrial Clusters/Area.<br>
+
+                  Additional Information<br>
+                  => You can click on the markers (<img src="marker.png">) to get additional Information about the Industrial Cluster. <br>Each Industrial Cluster has a <a href="what is comprehensive environmental pollution index"> CEPI<a> index value comprising of 3 dimensions.The index captures the various dimensions of environment including air, water and land.
+
+
+                   </div>
