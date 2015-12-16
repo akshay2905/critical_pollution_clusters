@@ -42,10 +42,10 @@ html, body, #map {
     height:inherit;
     /* To center horizontally */
     margin: 0 auto;
-    font-size: 18px;
+    font-size: 16px;
 }
 .modal-dialog{
-  width :75%;
+  width :85%;
 }
 .launch{
   position:absolute;
@@ -57,7 +57,7 @@ html, body, #map {
 
 }
 .btn-container{
-  padding: 20px 20px 20px;
+  padding: 10px ;
   margin: 20px;
 }
 	  </style>	
@@ -75,7 +75,7 @@ html, body, #map {
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="vertical-alignment-helper">
-        <div class="modal-dialog vertical-align-center">
+        <div class="modal-dialog vertical-align-top">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
@@ -92,6 +92,11 @@ html, body, #map {
 
                   => The blue markers represent the Industrial Clusters/Area.<br><br>
 
+
+                  How can I view the CEPI index Scores?<br>
+                  => You can <b>click</b> on the markers (<img src="marker.png">) to get additional Information about the CEPI Index Scores.
+                  <br><br>
+
                   Additional Information<br>
                   => Each Industrial Cluster has a <a href="https://www.google.co.in/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=what+is+comprehensive+environmental+pollution+index" target="_blank"> CEPI</a> index value comprising of 3 dimensions.The index captures the dimensions of environment including Air, Water and Land.<br><br>
                   What is CEPI Index ?<br>
@@ -99,9 +104,8 @@ html, body, #map {
 
                   How can I view the CEPI index Scores?<br>
                   => You can click on the markers (<img src="marker.png">) to get additional Information about the CEPI Index Scores.
-<br><br>
-                  What is the Data Source? <br>
-                  => The CEPI index data was grabbed from <a href="https://data.gov.in/" target="_blank">www.datagov.in </a> and the latitude/longitude information was taken from Google MAPs Geocoding API. 
+
+        
                    </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
